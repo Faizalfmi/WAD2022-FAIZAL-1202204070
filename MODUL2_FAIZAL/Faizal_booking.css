@@ -1,0 +1,67 @@
+.navbar.center .navbar-inner {
+    text-align: center;
+  }
+  .navbar.center .navbar-inner .nav {
+    float: none;
+    display:inline-block;
+    vertical-align: middle;
+  }
+
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+form {
+    grid-template-columns: 200px 1fr;
+    grid-gap: 16px;
+    
+    margin-right: 50px;
+}
+input[type="text"],input[type="date"],input[type="time"],input[type="number"],select,textarea {
+    grid-column: 2 / 3;
+    padding: 10px 18px;
+    margin: 7px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    right: 15%;
+    width: 100%;
+}
+
+input[type="submit"]{
+    background-color: rgb(34, 109, 184);
+    color: white;
+    border: none;
+    cursor: pointer;
+    grid-column: 2 / 3;
+    padding: 10px 18px;
+    margin: 7px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    right: 15%;
+    width: 100%;
+}
+
+input[readonly]{
+    background-color: #ececec;
+}
+
+
+
+footer{
+    height: 50px;
+    background-color: #f0e9f3;
+    text-align: center;
+    margin-bottom: 0%;
+    text-align: center;
+}
