@@ -37,7 +37,7 @@
                     
                         if (isset($_POST['book3'])) {
                             $gambar  = "https://www.toyota.astra.co.id/sites/default/files/2022-08/3-super-white.png";
-                        } if (isset($_POST['book2'])) {
+                        } elseif (isset($_POST['book2'])) {
                             $gambar  = "https://daihatsu-promo.com/wp-content/uploads/2021/11/1.5-ads.png";
                         } else {
                         $gambar  = "https://www.toyota.astra.co.id/sites/default/files/2021-11/4-avanza-silver-mica-metallic.png";

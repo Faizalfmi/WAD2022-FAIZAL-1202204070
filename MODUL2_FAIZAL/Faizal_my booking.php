@@ -45,7 +45,7 @@
         </nav>
 
             <?php
-                $nama = isset($_GET['namaaa']) ? $_GET['nama'] : '';
+                $nama = isset($_GET['nama']) ? $_GET['nama'] : '';
                 $book = isset($_GET['book']) ? $_GET['book'] : '';
                 $start = isset($_GET['start']) ? $_GET['start'] : '';
                 $hari = isset($_GET['hari']) ? $_GET['hari'] : '';

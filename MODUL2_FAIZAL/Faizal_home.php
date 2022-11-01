@@ -15,7 +15,7 @@
             <div class="navbar-inner">
                 <ul class="nav navbar-nav">
                     <li><a href="Faizal_home.php">Home</a></li>
-                    <li><a href="Faizal_booking.phpa">Booking</a></li>
+                    <li><a href="Faizal_booking.php">Booking</a></li>
                 </ul>
             </div>
         </nav>
