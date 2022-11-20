@@ -1,0 +1,75 @@
+.navbar {
+
+    background-color: #3563E9;
+    box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+}
+
+.navbar a{
+    color: #E0E0E0;
+}
+
+.column {
+float: left;
+width: 40%;
+
+margin-left: 5%;
+margin-right: 5%;
+margin-top: 100px;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+.column h1 {
+    font-family: 'raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 66px;
+    letter-spacing: 1.2px;
+    text-transform: capitalize;
+}
+
+.column p{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.2px;
+    color: #757575;
+}
+button {
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 15px 40px;
+gap: 10px;
+
+width: 137px;
+height: 51px;
+
+/* light/primary/origin */
+
+background: #3563E9;
+border-radius: 5px;
+border: none;
+color: #E0E0E0;
+text-align: center;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
