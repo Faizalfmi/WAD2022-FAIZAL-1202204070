@@ -1,5 +1,5 @@
 <?php
-    $host="localhost:8080";
+    $host="localhost";
     $user="root";
     $password="";
     $db="modul3_faizal";

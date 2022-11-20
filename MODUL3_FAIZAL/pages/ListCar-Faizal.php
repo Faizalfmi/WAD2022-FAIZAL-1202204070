@@ -64,9 +64,13 @@
             <div class="card-body">
               <h5 class="card-title"><?=$selects['nama_mobil']?></h5>
               <p class="card-text"><?php $string?></p>
+              <form action="Detail-Faizal.php" method="post">
+              <button style="background-color: #3563E9;" name="<?php $selects['id_mobil']?>"><a href="Detail-Faizal.php">Detail</a></button>
+              </form>
+              <form action="C:\xampp\htdocs\MODUL3_FAIZAL\config\Delete-Faizal.php" method="post">
+              <button style="background-color: #E93535;" name="<?php $selects['id_mobil']?>"><a href="C:\xampp\htdocs\MODUL3_FAIZAL\config\Delete-Faizal.php">Delete</a></button>
+              </form>
               
-              <button style="background-color: #3563E9;"><a href="Detail-Faizal.php">Detail</a></button>
-              <button style="background-color: #E93535;"><a href="C:\xampp\htdocs\MODUL3_FAIZAL\config\Delete-Faizal.php">Delete</a></button>
             </div>
           </div>
         </div>

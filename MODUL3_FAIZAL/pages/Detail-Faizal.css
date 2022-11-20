@@ -1,0 +1,65 @@
+.navbar {
+
+    background-color: #3563E9;
+    
+
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    float: none;
+    display:inline-block;
+}
+
+.nav .navbar-nav {
+    box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a{
+    color: #E0E0E0;
+
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+form {
+    grid-template-columns: 200px 1fr;
+    grid-gap: 16px;
+    
+    margin-right: 50px;
+}
+input[type="text"],input[type="date"],input[type="time"],input[type="number"],select,textarea {
+    grid-column: 2 / 3;
+    padding: 10px 18px;
+    margin: 7px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    right: 15%;
+    width: 100%;
+}
+
+input[type="submit"]{
+    background-color: rgb(34, 109, 184);
+    color: white;
+    border: none;
+    cursor: pointer;
+    grid-column: 2 / 3;
+    padding: 10px 18px;
+    margin: 7px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    right: 15%;
+    width: 100%;
+}

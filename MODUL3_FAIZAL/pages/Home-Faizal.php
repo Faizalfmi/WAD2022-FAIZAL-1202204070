@@ -127,20 +127,7 @@
     </head>
 
     <body>
-        <?php 
-        include('C:\xampp\htdocs\MODUL3_FAIZAL\config\connector.php');
-        $nav = '';
-        $query = "SELECT 'nama_mobil' FROM showroom_faizal_table";
-        $result = $conn->query($query);
-
-        if ($result->num_rows > 0) {
-        // output data of each row
-            $nav = 'ListCar-Faizal.php';
-        } else {
-            $nav = "add-Faizal.php";
-        }
-        $conn->close();
-        ?>
+       
     <nav class="navbar navbar-inverse" role="navigation">
             <div class="navbar-inner">
                 <ul class="nav navbar-nav">
