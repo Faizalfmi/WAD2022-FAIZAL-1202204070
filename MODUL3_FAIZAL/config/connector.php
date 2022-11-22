@@ -4,7 +4,7 @@
     $password="";
     $db="modul3_faizal";
     
-    $conn = mysqli_connect($host,$user,$password,$db);
+    $conn = mysqli_connect($host,$user,$password,$db,3325);
     if (!$conn){
           die("Koneksi gagal:".mysqli_connect_error());
     }

@@ -31,21 +31,21 @@
             <div class="row">
                 <div class="column">
                     <?php 
-                    include('C:\xampp\htdocs\MODUL3_FAIZAL\config\connector.php');
+                    // include('C:\xampp\htdocs\MODUL3_FAIZAL\config\connector.php');
 
-                    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                        // Something posted
+                    // if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                        
                     
-                        if (isset($_POST[$selects['id_mobil']])) {
-                            $gambar  = "https://www.toyota.astra.co.id/sites/default/files/2022-08/3-super-white.png";
-                        };
-                    }
-                    $query = mysqli_query($conn, "SELECT * FROM showroom_faizal_table WHERE");
+                    //     if (isset($_POST[$selects['id_mobil']])) {
+                    //         $gambar  = "https://www.toyota.astra.co.id/sites/default/files/2022-08/3-super-white.png";
+                    //     };
+                    // }
+                    // $query = mysqli_query($conn, "SELECT * FROM showroom_faizal_table WHERE");
       
 
-                    $selects = mysqli_fetch_assoc($query)
+                    // $selects = mysqli_fetch_assoc($query)
                     ?>
-                    <img src=<?php echo $gambar;?> alt="" style="width: 100%;" alt="">
+                    <img src="https://brixtonforged.com/wp-content/uploads/2022/04/1.jpg" alt="" style="width: 100%;" alt="">
                     
                 </div>
 
@@ -83,18 +83,6 @@
                 </div>
             </div>
 
-            <?php 
-            $pilihan = isset($_GET['jenis']) ? $_GET['jenis'] : '';
-            if($pilihan=="Toyota Avanza"){
-                $gambar  = "https://www.toyota.astra.co.id/sites/default/files/2021-11/4-avanza-silver-mica-metallic.png";
-            }elseif($pilihan=="Daihatsu Xenia"){
-                $gambar  = "https://daihatsu-promo.com/wp-content/uploads/2021/11/1.5-ads.png";
-            }elseif($pilihan=="Toyota Yaris"){
-                $gambar  = "https://www.toyota.astra.co.id/sites/default/files/2022-08/3-super-white.png";
-            }
-            ?>
 
-
-            <footer>Created By FAIZAL_1202204070</footer>
         </body>
         </html>

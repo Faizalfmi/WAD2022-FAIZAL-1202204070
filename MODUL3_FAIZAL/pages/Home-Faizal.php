@@ -1,3 +1,6 @@
+<?php 
+        include('C:\xampp\htdocs\MODUL3_FAIZAL\config\connector.php');
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -128,7 +131,6 @@
 
     <body>
     <?php 
-        include('C:\xampp\htdocs\MODUL3_FAIZAL\config\connector.php');
         $nav = '';
         $query = "SELECT 'nama_mobil' FROM showroom_faizal_table";
         $result = $conn->query($query);
