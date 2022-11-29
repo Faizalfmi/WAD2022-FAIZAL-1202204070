@@ -1,3 +1,14 @@
+<?php 
+if (!isset($_SESSION)){
+    session_start();
+}
+if(!isset($_SESSION['email'])){
+    die("<b>Oops!</b> Access Failed.
+        <p>Sistem Logout. Anda harus melakukan Login kembali.</p>
+        <button type='button' onclick=location.href='./Home-before.php'>Back</button>");
+}
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,13 +21,270 @@
             <link rel="stylesheet" href="ListCar-Faizal.css">
 
             <style>
-                
+                .navbar {
+
+background-color: #3563E9;
+
+
+
+height: 79px;
+left: 0px;
+top: 0px;
+width: 100%;
+top: 0;
+left: 0;
+overflow-y: hidden;
+float: none;
+display:inline-block;
+}
+
+.nav .navbar-nav {
+box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar button{
+width: 90px;
+height: 25px;
+
+float: right;
+
+background: #FFFFFF;
+border-radius: 5px;
+border: none;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+letter-spacing: 0.46px;
+
+
+
+color: #3563E9;
+}
+
+.col {
+float: left;
+width: 40%;
+padding: 20px 110px;
+margin: auto;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+margin: auto;
+display: block;
+align-content: center;
+align-items: center;
+margin-left: 5%;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+.col {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+}
+}
+.card {
+
+padding: 16px;
+text-align: left;
+background-color: white;
+/* width: 400px;
+height: 400px; */
+box-shadow: 6px 14px 40px rgba(210, 210, 210, 0.6);
+border-radius: 16px;
+float: left;
+position: auto;
+}
+
+.card img {
+object-fit: cover;
+width: 368px;
+height: 225px;
+left: 16px;
+top: 16px;
+
+border-radius: 8px;
+}
+
+.card h5 {
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+}
+
+.card input[type='submit']{
+
+flex-direction: row;
+align-items: center;
+float: left;
+margin-left: 10%;
+width: 120px;
+height: 36px;
+
+
+border-radius: 100px;
+border: none;
+
+justify-content: center;
+
+cursor: pointer;
+}
+
+.card a{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+letter-spacing: 0.15px;
+
+color: #FFFFFF;
+}
+
+h1 {
+margin-left: 15%;
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 38px;
+/* identical to box height */
+
+letter-spacing: 1.2px;
+text-transform: capitalize;
+
+color: #000000;
+}
+
+#pawal{
+margin-left: 15%;
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+letter-spacing: 1.2px;
+text-transform: capitalize;
+
+color: #757575;
+}
+
+.navbar li{
+left: 15%;
+}
+
+
+#kanan{
+right: 12%;
+position: absolute;
+top: 10px;
+}
+
+#row{
+margin-left: 15%;
+margin-bottom: 5%;
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+letter-spacing: 1.2px;
+text-transform: capitalize;
+
+color: #757575;
+}
+
+
+.dropbtn {
+  width: 90px;
+height: 25px;
+
+float: right;
+
+background: #FFFFFF;
+border-radius: 5px;
+border: none;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+letter-spacing: 0.46px;
+
+
+
+color: #3563E9;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+background-color: #2980B9;
+}
+
+.dropdown {
+  position: absolute;
+float: right;
+right: 3%;
+top: 20px;
+display: inline-block;
+width: 70px;
+height: 25px;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 90px;
+overflow: auto;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
                 
             </style>
     </head>
 
     <?php 
     include('connector.php');
+    $tampilPeg    =mysqli_query($conn, "SELECT * FROM user_faizal WHERE email='$_SESSION[email]'");
+        $peg    =mysqli_fetch_array($tampilPeg);
     ?>
 
     <body>
@@ -26,9 +294,12 @@
                   <li><a href="Home-Faizal.php">Home</a></li>
                   <li><a style="color: white;" href=" ">MyCar</a></li>
                   <li id="kanan"><a href="add-Faizal.php"><button>Add Car</button></a></li>
-                  <li id="kanan2">
-                    <div class="dropdown">
-                      <button onclick="myFunction()" class="dropbtn">nama <span id="icon">expand_more</span></button>
+                  
+                </ul>
+            </div>
+        </nav>
+        <div class="dropdown">
+                      <button onclick="myFunction()" class="dropbtn"><?php echo $peg['nama']?></button>
                       <div id="myDropdown" class="dropdown-content">
                         <a href="Profile-Faizal.php">Profile</a>
                         <a href="logout.php">Logout</a>
@@ -57,11 +328,6 @@
                         }
                       }
                     </script>
-                  </li>
-                </ul>
-            </div>
-        </nav>
-    
         <h1>My Show Room</h1>
         <p id="pawal">List Show Room Faizal - 1202204070</p>
 

@@ -1,3 +1,14 @@
+<?php 
+if (!isset($_SESSION)){
+    session_start();
+}
+if(!isset($_SESSION['email'])){
+    die("<b>Oops!</b> Access Failed.
+        <p>Sistem Logout. Anda harus melakukan Login kembali.</p>
+        <button type='button' onclick=location.href='./Home-before.php'>Back</button>");
+}
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,7 +38,7 @@
                   <li id="kanan"><a href="add-Faizal.php"><button>Add Car</button></a></li>
                   <li id="kanan2">
                     <div class="dropdown">
-                      <button onclick="myFunction()" class="dropbtn">nama <span id="icon">expand_more</span></button>
+                      <button onclick="myFunction()" class="dropbtn"><?php echo $peg['nama']?><span id="icon">expand_more</span></button>
                       <div id="myDropdown" class="dropdown-content">
                         <a href="Profile-Faizal.php">Profile</a>
                         <a href="logout.php">Logout</a>

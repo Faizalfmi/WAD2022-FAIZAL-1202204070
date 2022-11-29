@@ -34,8 +34,8 @@
             <div class="navbar-inner">
                 <ul class="nav navbar-nav">
                 <li><a style="color: white;" href="">Home</a></li>
-                <li><a href="Login-Faizal">MyCar</a></li>
-                <li id="kanan" ><a href="Login-Faizal.php" style="color: white;">Login</a></li>
+                <li><a href="ListCar-Faizal.php">MyCar</a></li>
+                <li id="kanan" ><a href="Login-Faizal.php" style="color: white; float:right; right:20px;">Login</a></li>
                 </ul>
             </div>
         </nav>
@@ -45,7 +45,7 @@
             <h1>Selamat Datang Di Show Room Faizal</h1>
             <p>At lacus vitae nulla sagittis scelerisque nisl. Pellentesque duis cursus vestibulum, facilisi ac, sed faucibus.</p>
             <br>
-            <form action="Login-Faizal"><button>MyCar</button></form>
+            <form action="ListCar-Faizal.php"><button>MyCar</button></form>
             
             <br>
             <img src="logo-ead.png" alt="" id="logo">
