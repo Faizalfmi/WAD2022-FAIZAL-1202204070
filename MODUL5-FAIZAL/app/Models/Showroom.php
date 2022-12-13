@@ -10,7 +10,7 @@ class Showroom extends Model
     
     use HasFactory;
 
-    protected $table = 'showroom';
+    protected $table = 'showrooms';
 
     protected $fillable = [
         'id',

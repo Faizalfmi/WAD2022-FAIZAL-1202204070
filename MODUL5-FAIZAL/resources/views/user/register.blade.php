@@ -19,8 +19,9 @@
             </div>
             <div class="column">
                 
-                <form action="/register" method="POST">
+                <form action="{{ route('register.do') }}" method="POST">
                 @csrf
+                @method('POST')
                 <h1>Register</h1>
                 <br>
                 <br>
