@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('Home-before');
 });
-Route::get('/home', function () {
+Route::get('/homes', function () {
     return view('Home-Faizal');
 });
 
